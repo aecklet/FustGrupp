@@ -10,5 +10,12 @@ namespace rednit.Domain
         public string MatchID { get; set; }
         public string MessageID { get; set; }
         DateTime GetTime;
+
+        public Match(string matchID, string messageID, DateTime getTime)
+        {
+            MatchID = matchID;
+            MessageID = messageID;
+            GetTime = getTime;
+        }
     }
 }
