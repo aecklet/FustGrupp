@@ -33,6 +33,7 @@ namespace rednit
                 {
                     case 1:
                         {
+
                             Console.Write("Create account: ");
                             User user = new User("Joakim", "Snabel", 32);
                             //Console.Write("First name: ");
