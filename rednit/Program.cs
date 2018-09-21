@@ -25,7 +25,7 @@ namespace rednit
                 }
                 else
                 {
-                    Console.WriteLine("You have to choose an integer.");
+                    Console.WriteLine("You have to choose a number.");
                 }
 
 
