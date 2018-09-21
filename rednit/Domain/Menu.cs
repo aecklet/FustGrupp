@@ -18,9 +18,9 @@ namespace rednit.Domain
                 Console.WriteLine("[4] Quit");
 
                 Console.Write("\nSelect: ");
-                string menySelect = Console.ReadLine();
+                int menySelect = Utils.ReadInputMinMax(1, 4);
 
-                int nr;
+                /*int nr;
                 if (int.TryParse(menySelect, out nr))//en TryParse för att fånga fel inmatningar i menyn
                 {
 
@@ -28,10 +28,10 @@ namespace rednit.Domain
                 else
                 {
                     Console.WriteLine("You have to choose a number.");
-                }
+                }*/
 
 
-                switch (nr)
+                switch (menySelect)
                 {
                     case 1:
                         {
