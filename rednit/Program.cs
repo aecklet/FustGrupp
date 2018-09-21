@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rednit.Domain;
+using System;
 
 namespace rednit
 {
@@ -11,15 +12,33 @@ namespace rednit
             {
                 Console.WriteLine("[1] Create Account");
                 Console.WriteLine("[2] Login");
-                Console.WriteLine("[3] Quit");
+                Console.WriteLine("[3] Match");
+                Console.WriteLine("[4] Quit");
 
-                int menySelect = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\nSelect: ");
+                string menySelect = Console.ReadLine();
 
-                switch (menySelect)
+                int nr;
+                if (int.TryParse(menySelect, out nr))//en TryParse för att fånga fel inmatningar i menyn
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("You have to choose an integer.");
+                }
+
+
+                switch (nr)
                 {
                     case 1:
                         {
-                            Console.WriteLine("Create account");
+                            Console.Write("Create account: ");
+                            User user = new User("Joakim", "Snabel", 32);
+                            //Console.Write("First name: ");
+                            //user.FirstName = Console.ReadLine();
+
+                            Console.WriteLine(user.FirstName + " " + user.Gender + " " + user.Age);
 
                             break;
                         }
@@ -27,11 +46,18 @@ namespace rednit
                     case 2:
                         {
 
-                            Console.WriteLine("Login");
+                            Console.WriteLine("User Name: ");
+                            Console.WriteLine("");
                             break;
                         }
 
                     case 3:
+                        {
+                            Console.WriteLine("Search User: ");
+                            break;
+                        }
+
+                    case 4:
                         {
                             meny = false;
                             break;
