@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace rednit.Domain
 {
     class User
     {
-        // public int UserID { get; set; }
+        string uid = Regex.Replace(Convert.ToBase64String(Guid.NewGuid().ToByteArray()), "[/+=]", "");
         public string FirstName { get; set; }
         public string Gender { get; set; }
         public int Age { get; set; }
