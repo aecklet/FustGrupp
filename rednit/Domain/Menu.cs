@@ -10,10 +10,10 @@ namespace rednit.Domain
 
         public void Getmenu()
         {
-            List<string[]> users = new List<string[]>();
+            List<string[]> users = new List<string[]>();// Sparar Användaren som en Array innuti en lista.
             string[] userPref = new string[4];
             User user = new User();
-            while (meny)
+            while (meny)//En while loop för menyn
             {
                 Console.WriteLine("[1] Create Account");
                 Console.WriteLine("[2] Login");
@@ -21,14 +21,15 @@ namespace rednit.Domain
                 Console.WriteLine("[4] Quit");
 
                 Console.Write("\nSelect: ");
-                int menySelect = Utils.ReadInputMinMax(1, 4);
+                int menySelect = Utils.ReadInputMinMax(1, 4); // Hanterar siffer inmatning så att man inte får ett Error om man skriver tecken.
 
                 switch (menySelect)
                 {
                     case 1:
                         {
+                            // Skriver in en användare och sparar det i classen User som sen sparas i en Array.
                             Console.Clear();
-                            Console.WriteLine("Create account")   
+                            Console.WriteLine("Create account");  
                             Console.Write("Name: ");
                             user.FirstName = Console.ReadLine();
                             Console.Write("Gender: ");
@@ -44,6 +45,7 @@ namespace rednit.Domain
 
                     case 2:
                         {
+                            //Skriver ut alla användare.
                             Console.Clear();
                             foreach (string[] user1 in users)
                             {
@@ -59,9 +61,9 @@ namespace rednit.Domain
                             string userGenderSearch = Console.ReadLine();//användaren ger ett sökord.
 
                             foreach (string[] item in users)
-                                if (item[1].Contains(userGenderSearch))//söker på item 1 som är variabel titel i våran array.
+                                if (item[1].Contains(userGenderSearch))//söker på item 1 som är variabel Kön i våran array.
                                 {
-                                    //Skriver ut alla 3 index platser i arrayn för att få fram hela loggen.
+                                    //Skriver ut alla 4 index platser i arrayn för att få fram hela användaren.
                                     Console.WriteLine("\t" + item[0]);
                                     Console.WriteLine("\t" + item[1]);
                                     Console.WriteLine("\t" + item[2]);
@@ -75,6 +77,7 @@ namespace rednit.Domain
 
                     case 4:
                         {
+                            //avbryter meny loopen och sätter meny bool 
                             Console.Clear();
                             meny = false;
                             break;
