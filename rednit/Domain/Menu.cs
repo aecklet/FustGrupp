@@ -23,17 +23,6 @@ namespace rednit.Domain
                 Console.Write("\nSelect: ");
                 int menySelect = Utils.ReadInputMinMax(1, 4);
 
-                /*int nr;
-                if (int.TryParse(menySelect, out nr))//en TryParse för att fånga fel inmatningar i menyn
-                {
-
-                }
-                else
-                {
-                    Console.WriteLine("You have to choose a number.");
-                }*/
-
-
                 switch (menySelect)
                 {
                     case 1:
@@ -62,16 +51,6 @@ namespace rednit.Domain
                             {
                                 Console.WriteLine(user1[0] + " " + user1[1] + " " + user1[2] + " " + user1[3]);
                             }
-                            //Console.Write("Write your name: ");
-                            //string userName = Console.ReadLine();
-                            //if(userName == user.FirstName)
-                            //{
-                            //    Console.WriteLine("Welcome to our awesome site!!");
-                            //}
-                            //else
-                            //{
-                            //    Console.WriteLine("Enter valid username!");
-                            //}
                             break;
                         }
 
