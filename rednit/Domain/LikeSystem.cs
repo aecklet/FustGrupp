@@ -15,12 +15,12 @@ namespace rednit.Domain
         {
             if (like)
             {
-
+                Console.WriteLine("You have liked this person");
 
             }
             else
             {
-                Console.WriteLine("GTFO");
+                Console.WriteLine("Ok.");
             }
         }
     }
