@@ -16,7 +16,6 @@ namespace rednit.Domain
             if (like)
             {
                 Console.WriteLine("You have liked this person");
-
             }
             else
             {

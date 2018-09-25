@@ -28,8 +28,7 @@ namespace rednit.Domain
                     case 1:
                         {
                             Console.Clear();
-                            Console.WriteLine("Create account");
-                            
+                            Console.WriteLine("Create account")   
                             Console.Write("Name: ");
                             user.FirstName = Console.ReadLine();
                             Console.Write("Gender: ");
@@ -38,7 +37,6 @@ namespace rednit.Domain
                             user.Age = Console.ReadLine();
                             Console.Write("Looking for: ");
                             user.PrefGender = Console.ReadLine();
-
                             users.Add(new string[] { user.FirstName, user.Gender, user.Age, user.PrefGender });
 
                             break;
@@ -72,7 +70,6 @@ namespace rednit.Domain
                                 }
                                 else
                                     Console.WriteLine("\nHittade inget med angivna sökordet\n");
-
                             break;
                         }
 
