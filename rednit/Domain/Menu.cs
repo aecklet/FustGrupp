@@ -58,10 +58,10 @@ namespace rednit.Domain
                         {
                             Console.WriteLine("Här kan du söka på Användare");
                             Console.Write("Sök på Kön: ");
-                            string sökOrd = Console.ReadLine();//användaren ger ett sökord.
+                            string userGenderSearch = Console.ReadLine();//användaren ger ett sökord.
 
                             foreach (string[] item in users)
-                                if (item[1].Contains(sökOrd))//söker på item 1 som är variabel titel i våran array.
+                                if (item[1].Contains(userGenderSearch))//söker på item 1 som är variabel titel i våran array.
                                 {
                                     //Skriver ut alla 3 index platser i arrayn för att få fram hela loggen.
                                     Console.WriteLine("\t" + item[0]);
