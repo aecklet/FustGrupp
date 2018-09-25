@@ -5,12 +5,6 @@ namespace rednit.Domain
 {
     class Utils
     {
-       // public HashCode GetID(string strInput)
-       // {
-        //    Random rnd = new Random(strInput.GetHashCode());
-        //    return rnd;
-       // }
-
         public static int ReadInputMinMax(int min, int max) //minsta och största värde av funktionen skickas hit
         {
             var value = min;
