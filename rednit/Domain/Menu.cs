@@ -77,8 +77,23 @@ namespace rednit.Domain
 
                     case 3:
                         {
-                            Console.Clear();
-                            Console.WriteLine("Search User: ");
+                            Console.WriteLine("Här kan du söka på Användare");
+                            Console.Write("Sök på Kön: ");
+                            string sökOrd = Console.ReadLine();//användaren ger ett sökord.
+
+                            foreach (string[] item in users)
+                                if (item[1].Contains(sökOrd))//söker på item 1 som är variabel titel i våran array.
+                                {
+                                    //Skriver ut alla 3 index platser i arrayn för att få fram hela loggen.
+                                    Console.WriteLine("\t" + item[0]);
+                                    Console.WriteLine("\t" + item[1]);
+                                    Console.WriteLine("\t" + item[2]);
+                                    Console.WriteLine("\t" + item[3]);
+
+                                }
+                                else
+                                    Console.WriteLine("\nHittade inget med angivna sökordet\n");
+
                             break;
                         }
 
